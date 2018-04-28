@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>hlx</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://inmyai.com/"/>
+  <updated>2018-04-28T11:03:26.957Z</updated>
+  <id>http://inmyai.com/</id>
+  
+  <author>
+    <name>hlx</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello blog</title>
+    <link href="http://inmyai.com/2018/04/27/hello-blog/"/>
+    <id>http://inmyai.com/2018/04/27/hello-blog/</id>
+    <published>2018-04-27T09:13:00.000Z</published>
+    <updated>2018-04-28T11:03:26.957Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to my blog</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to my blog&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="日志" scheme="http://inmyai.com/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="第一篇" scheme="http://inmyai.com/tags/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    
+  </entry>
+  
+</feed>
