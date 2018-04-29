@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://inmyai.com/"/>
-  <updated>2018-04-29T07:56:11.773Z</updated>
+  <updated>2018-04-29T14:58:07.107Z</updated>
   <id>http://inmyai.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客搭建指南(一)</title>
+    <link href="http://inmyai.com/2018/04/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
+    <id>http://inmyai.com/2018/04/29/博客搭建指南/</id>
+    <published>2018-04-29T13:44:00.000Z</published>
+    <updated>2018-04-29T14:58:07.107Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>自己写一个博客系统吧？不存在的。<br><br><br>推荐一个快速搭建博客的方法，采用Hexo + GitHub Pages进行搭建，简单实用，而且不需要自己购买9块9包月的服务器。</p><h3 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h3><ul><li><a href="http://www.lovebxm.com/2017/05/30/buildBlog/" target="_blank" rel="noopener">基础教程</a>(大概需要20分钟，完成博客的基础模块，出自<strong>白小明</strong>大佬)</li><li><a href="https://www.jianshu.com/p/5973c05d7100" target="_blank" rel="noopener">进阶教程</a>(大概需要几个小时，扩展博客的功能，出自<strong>代码咖啡</strong>大佬)</li></ul><h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><ul><li>进阶教程中的搜索功能添加出现问题的话(我就是一个)，可以采用另一种方法：<br><a href="https://zty.js.org/post/2016/07/08/hexo-localsearch.html" target="_blank" rel="noopener">本地站内搜索</a>(出自<strong>Zetao Yang</strong>大佬)</li><li>更多扩展功能请自行百度</li><li>后续推出Live2D 模块安装教程(右下角那只宠物就是Live2D的产物</li><li>后续推出底部logo栏更改教程</li><li>后续推出Hexo-Admin后台管理中Deploy功能的正确打开方式(Windows 环境下)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;自己写一个博客系统吧？不存在的。&lt;br&gt;&lt;br&gt;&lt;br&gt;推荐一个快速搭建博客的方法，采用Hexo + GitHub Pages进行搭建，简单
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="http://inmyai.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>hello blog</title>
