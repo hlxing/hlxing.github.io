@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://inmyai.com/"/>
-  <updated>2018-04-30T07:56:35.347Z</updated>
+  <updated>2018-04-30T14:35:34.756Z</updated>
   <id>http://inmyai.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title> GitHub Pages 腾讯云CDN加速教程</title>
+    <link href="http://inmyai.com/2018/04/30/GitHub-Pages-%E8%85%BE%E8%AE%AF%E4%BA%91CDN%E5%8A%A0%E9%80%9F%E6%95%99%E7%A8%8B/"/>
+    <id>http://inmyai.com/2018/04/30/GitHub-Pages-腾讯云CDN加速教程/</id>
+    <published>2018-04-30T12:48:00.000Z</published>
+    <updated>2018-04-30T14:35:34.756Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>基于GitHub Pages搭建的博客是存储在GitHub服务器上，而GitHub Pages共用一台服务器，且服务器是在外国。因此，打开博客 = ppt演示。目前一种主流的方式是通过CDN提高网页的响应速度。</p><p>网络上有很多关于腾讯云CDN加速教程，但是不够详细，博主也因此折腾半天。现在，总结一下目前腾讯云CDN加速的具体流程。</p><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul><li>GitHub Pages 地址解析到个人域名(可以参照之前<a href="http://www.inmyai.com/2018/04/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" target="_blank" rel="noopener">博客搭建指南</a>中的<a href="http://localhost:4000/admin/#/posts/cjgm8pvcs00004k7kbmzh5pwj" target="_blank" rel="noopener">基础教程</a>)</li></ul><h2 id="开始食用"><a href="#开始食用" class="headerlink" title="开始食用"></a>开始食用</h2><h3 id="1-开通腾讯云CDN服务，添加域名。"><a href="#1-开通腾讯云CDN服务，添加域名。" class="headerlink" title="1.开通腾讯云CDN服务，添加域名。"></a>1.开通<a href="https://console.cloud.tencent.com/cdn" target="_blank" rel="noopener">腾讯云CDN服务</a>，添加域名。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">域名:输入你自己的个人域名，wwww.xxxx.com</span><br><span class="line">源站设置:输入你GitHub Pages的ip地址，具体如下</span><br><span class="line">其他保持默认</span><br></pre></td></tr></table></figure><p>例如，我的GitHub Pages:hlxing.github.io，打开命令行，输入<code>ping hlxing.github.io</code></p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/37722924.jpg" alt="示例"><br>源站设置为: <code>185.199.110.153</code></p><h3 id="2-等待部署，然后获取CNAME，效果图："><a href="#2-等待部署，然后获取CNAME，效果图：" class="headerlink" title="2.等待部署，然后获取CNAME，效果图："></a>2.等待部署，然后获取CNAME，效果图：</h3><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/78284969.jpg" alt="效果图"></p><p>CNAME为：<code>www.xxxx.com.cdn.dnsv1.com</code></p><h3 id="3-进入域名管理，点击解析，添加4条记录。"><a href="#3-进入域名管理，点击解析，添加4条记录。" class="headerlink" title="3.进入域名管理，点击解析，添加4条记录。"></a>3.进入<a href="https://console.cloud.tencent.com/domain" target="_blank" rel="noopener">域名管理</a>，点击解析，添加4条记录。</h3><ul><li><p>第一条(可选)：  </p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/47077302.jpg" alt="@"></p><p>主机记录选择 <code>@</code> ,映射xxxx.com<br>记录类型选择 <code>CNAME</code><br>线路类型选择 <code>国内</code>，只有国内进行访问时生效<br>记录值输入刚刚从CDN获取的<code>CNAME</code></p></li><li><p>第二条(必选):</p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/84970049.jpg" alt="www"></p><p>主机记录选择 <code>www</code> ,映射<a href="http://www.xxxx.com" target="_blank" rel="noopener">www.xxxx.com</a><br>记录类型选择 <code>CNAME</code><br>线路类型选择 <code>国内</code>，只有国内进行访问时生效<br>记录值输入刚刚从CDN获取的<code>CNAME</code></p></li><li><p>第三条(可选):</p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/87422341.jpg" alt="@国外"></p><p>主机记录选择 <code>@</code> ,映射xxxx.com<br>记录类型选择 <code>CNAME</code><br>线路类型选择 <code>国外</code>，只有国外进行访问时生效<br>记录值输入 自己的<code>GitHub Pages地址</code></p></li><li><p>第四条(必选):</p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/80226340.jpg" alt="www国外"></p><p>主机记录选择 <code>www</code> ,映射<a href="http://www.xxxx.com" target="_blank" rel="noopener">www.xxxx.com</a><br>记录类型选择 <code>CNAME</code><br>线路类型选择 <code>国外</code>，只有国外进行访问时生效<br>记录值输入 自己的<code>GitHub Pages地址</code></p></li><li><p>关于分国外国内：</p><p>GitHub Pages服务器在外国，用国内的CDN等于没有，且国外访问GitHub Pages是十分流畅的。</p></li></ul><h3 id="4-CDN验证"><a href="#4-CDN验证" class="headerlink" title="4.CDN验证"></a>4.CDN验证</h3><ul><li>打开命令行，输入 <code>ping xxxx.com</code> 或者 <code>www.xxxx.com</code>，如果出现的IP地址不是你GitHub Pages的ip地址，则CDN加速成功。如果没有，则可能是CDN还没有完成部署，或者域名解析还没完成(一般需要几分钟)。</li></ul><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/76553225.jpg" alt="CDN验证"></p><h3 id="5-食用效果"><a href="#5-食用效果" class="headerlink" title="5.食用效果"></a>5.食用效果</h3><p>打开<a href="http://ping.chinaz.com" target="_blank" rel="noopener">站长之家的Ping检测</a>，输入<code>xxxx.com</code>，或<code>www.xxxx.com</code>，或<code>xxxx.github.io</code>。</p><p>原本是一只褐色的公鸡(尚未开启CDN加速):</p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/5166014.jpg" alt="褐色公鸡"></p><p>然后被绿了(开启CDN加速):</p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-30/2001038.jpg" alt="绿色公鸡"></p><p>可见，效果极佳！</p><ul><li>备注：检测<code>xxxx.github.io</code>时发现还是一只褐色公鸡？？但实际上，它会发生重定向(F12查询)，且重定向后的请求的Remote Address均是CDN加速所用的服务器，因此CDN效果依然存在。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;基于GitHub Pages搭建的博客是存储在GitHub服务器上，而GitHub Pages共用一台服务器，且服务器是在外国。因此，打开博
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="http://inmyai.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="教程" scheme="http://inmyai.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="CDN" scheme="http://inmyai.com/tags/CDN/"/>
+    
+  </entry>
   
   <entry>
     <title>博客搭建指南</title>
