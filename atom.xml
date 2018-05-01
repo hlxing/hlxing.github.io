@@ -47,8 +47,8 @@
     <title>NexT 底部logo栏更改教程</title>
     <link href="http://inmyai.com/2018/05/01/%E5%BA%95%E9%83%A8logo%E6%A0%8F%E6%9B%B4%E6%94%B9%E6%95%99%E7%A8%8B/"/>
     <id>http://inmyai.com/2018/05/01/底部logo栏更改教程/</id>
-    <published>2018-05-01T12:41:11.000Z</published>
-    <updated>2018-05-01T12:50:54.714Z</updated>
+    <published>2018-05-01T12:41:00.000Z</published>
+    <updated>2018-05-01T13:21:02.591Z</updated>
     
     <content type="html"><![CDATA[<p>1.从 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener">图标库</a> 中挑选一款图标。<br>2.修改主题配置文件(<code>\xxxx.github.io\themes\next\_config.yml</code>)中footer.icon：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">  icon: user</span><br></pre></td></tr></table></figure><p>将icon值改为图标的名称。</p>]]></content>
     
@@ -61,6 +61,12 @@
     
     </summary>
     
+      <category term="博客" scheme="http://inmyai.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="教程" scheme="http://inmyai.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="NexT" scheme="http://inmyai.com/tags/NexT/"/>
     
   </entry>
   
