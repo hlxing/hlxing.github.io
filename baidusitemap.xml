@@ -4,16 +4,16 @@
 
     
   <url>
-    <loc>http://inmyai.com/2018/04/30/GitHub-Pages-%E8%85%BE%E8%AE%AF%E4%BA%91CDN%E5%8A%A0%E9%80%9F%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2018-04-30T14:42:54.280Z</lastmod>
+    <loc>http://inmyai.com/2018/05/01/Live2D-%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2018-05-01T12:29:12.781Z</lastmod>
     <data>
         <display>
-        <title> GitHub Pages 腾讯云CDN加速教程</title>
-        <pubTime>2018-04-30T12:48:00.000Z</pubTime>
+        <title>Live2D 模块安装教程</title>
+        <pubTime>2018-05-01T11:55:00.000Z</pubTime>
         
         <tag>教程</tag>
          
-        <tag>CDN</tag>
+        <tag>Live 2D</tag>
          
          
            
@@ -27,13 +27,35 @@
     
   <url>
     <loc>http://inmyai.com/2018/04/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2018-04-30T07:56:35.347Z</lastmod>
+    <lastmod>2018-05-01T11:54:45.565Z</lastmod>
     <data>
         <display>
         <title>博客搭建指南</title>
         <pubTime>2018-04-29T13:44:00.000Z</pubTime>
         
         <tag>教程</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客" url="http://inmyai.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://inmyai.com/2018/04/30/GitHub-Pages-%E8%85%BE%E8%AE%AF%E4%BA%91CDN%E5%8A%A0%E9%80%9F%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2018-04-30T14:42:54.280Z</lastmod>
+    <data>
+        <display>
+        <title> GitHub Pages 腾讯云CDN加速教程</title>
+        <pubTime>2018-04-30T12:48:00.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>CDN</tag>
          
          
            
