@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>入门Java:Reference</title>
+      <link href="/2018/05/02/%E5%85%A5%E9%97%A8Java-Reference/"/>
+      <url>/2018/05/02/%E5%85%A5%E9%97%A8Java-Reference/</url>
+      <content type="html"><![CDATA[<h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><ul><li>strong reference(强引用)</li><li>soft reference(软引用)</li><li>weak reference(弱引用)</li><li>phantom reference(虚引用/幽灵引用)</li></ul><h2 id="Strong-Reference"><a href="#Strong-Reference" class="headerlink" title="Strong Reference"></a>Strong Reference</h2><p>强引用，坚强的引用，233<br>有多强？强到GC(Garbage Collection)从不敢靠近它<br>如何声明这一最强的引用？(#ﾟДﾟ)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String strongReference = &quot;strong&quot;;</span><br></pre></td></tr></table></figure></p><p>实际上，这是我们平时编程所使用的。任何在内存中具有强引用的对象(不是变量!)都不会被GC处理掉。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strongReference = null;</span><br></pre></td></tr></table></figure></p><p>执行上句之后，原本的”strong”对象将会缺少有效的引用指向它，则可能会被处理掉，如果GC想要的话。<br>过程:<br><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-3/98766925.jpg" alt="强引用过程图"></p>]]></content>
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 入门 </tag>
+            
+            <tag> 总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>入门Java:Unbounded Wildcard Type(无限制通配符类型)</title>
       <link href="/2018/05/02/%E5%85%A5%E9%97%A8Java-Unbounded-Wildcard-Type-%E6%97%A0%E9%99%90%E5%88%B6%E9%80%9A%E9%85%8D%E7%AC%A6%E7%B1%BB%E5%9E%8B/"/>
       <url>/2018/05/02/%E5%85%A5%E9%97%A8Java-Unbounded-Wildcard-Type-%E6%97%A0%E9%99%90%E5%88%B6%E9%80%9A%E9%85%8D%E7%AC%A6%E7%B1%BB%E5%9E%8B/</url>
@@ -165,7 +188,7 @@
       <title>hello blog</title>
       <link href="/2018/04/27/hello-blog/"/>
       <url>/2018/04/27/hello-blog/</url>
-      <content type="html"><![CDATA[<p>Welcome to my blog</p>]]></content>
+      <content type="html"><![CDATA[<p>Welcome to my blog<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">quu..__</span><br><span class="line"> $$$b  `---.__</span><br><span class="line">  &quot;$$b        `--.                          ___.---uuudP</span><br><span class="line">   `$$b           `.__.------.__     __.---&apos;      $$$$&quot;              .</span><br><span class="line">     &quot;$b          -&apos;            `-.-&apos;            $$$&quot;              .&apos;|</span><br><span class="line">       &quot;.                                       d$&quot;             _.&apos;  |</span><br><span class="line">         `.   /                              ...&quot;             .&apos;     |</span><br><span class="line">           `./                           ..::-&apos;            _.&apos;       |</span><br><span class="line">            /                         .:::-&apos;            .-&apos;         .&apos;</span><br><span class="line">           :                          ::&apos;&apos;\          _.&apos;            |</span><br><span class="line">          .&apos; .-.             .-.           `.      .&apos;               |</span><br><span class="line">          : /&apos;$$|           .@&quot;$\           `.   .&apos;              _.-&apos;</span><br><span class="line">         .&apos;|$u$$|          |$$,$$|           |  &lt;            _.-&apos;</span><br><span class="line">         | `:$$:&apos;          :$$$$$:           `.  `.       .-&apos;</span><br><span class="line">         :                  `&quot;--&apos;             |    `-.     \</span><br><span class="line">        :##.       ==             .###.       `.      `.    `\</span><br><span class="line">        |##:                      :###:        |        &gt;     &gt;</span><br><span class="line">        |#&apos;     `..&apos;`..&apos;          `###&apos;        x:      /     /</span><br><span class="line">         \                                   xXX|     /    ./</span><br><span class="line">          \                                xXXX&apos;|    /   ./</span><br><span class="line">          /`-.                                  `.  /   /</span><br><span class="line">         :    `-  ...........,                   | /  .&apos;</span><br><span class="line">         |         ``:::::::&apos;       .            |&lt;    `.</span><br><span class="line">         |             ```          |           x| \ `.:``.</span><br><span class="line">         |                         .&apos;    /&apos;   xXX|  `:`M`M&apos;:.</span><br><span class="line">         |    |                    ;    /:&apos; xXXX&apos;|  -&apos;MMMMM:&apos;</span><br><span class="line">         `.  .&apos;                   :    /:&apos;       |-&apos;MMMM.-&apos;</span><br><span class="line">          |  |                   .&apos;   /&apos;        .&apos;MMM.-&apos;</span><br><span class="line">          `&apos;`&apos;                   :  ,&apos;          |MMM&lt;</span><br><span class="line">            |                     `&apos;            |tbap\</span><br><span class="line">             \                                  :MM.-&apos;</span><br><span class="line">              \                 |              .&apos;&apos;</span><br><span class="line">               \.               `.            /</span><br><span class="line">                /     .:::::::.. :           /</span><br><span class="line">               |     .:::::::::::`.         /</span><br><span class="line">               |   .:::------------\       /</span><br><span class="line">              /   .&apos;&apos;               &gt;::&apos;  /</span><br><span class="line">              `&apos;,:                 :    .&apos;</span><br><span class="line">                                   `:.:&apos;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>]]></content>
       
       <categories>
           

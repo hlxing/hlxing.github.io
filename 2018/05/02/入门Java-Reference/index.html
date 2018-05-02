@@ -62,7 +62,7 @@
 
 
 
-  <meta name="keywords" content="教程,Hexo," />
+  <meta name="keywords" content="入门,总结," />
 
 
 
@@ -75,20 +75,20 @@
 
 
 
-<meta name="description" content="参考hexo-admin/issues 背景由于Windows的某种原因，依据网站的大部分教程，均会抛出deploy Error: spawn UNKNOWN异常。而GitHub上issues给出了相关解决方案，现在总结一下具体的过程(填坑 填坑 打开站点配置文件(\xxxx.github.io\_config.yml)，在admin中加入deployCommand: &amp;#39;sh hexo-d">
-<meta name="keywords" content="教程,Hexo">
+<meta name="description" content="引用类型 strong reference(强引用) soft reference(软引用) weak reference(弱引用) phantom reference(虚引用/幽灵引用)  Strong Reference强引用，坚强的引用，233有多强？强到GC(Garbage Collection)从不敢靠近它如何声明这一最强的引用？(#ﾟДﾟ)1String strongReference">
+<meta name="keywords" content="入门,总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Admin Deploy扩展教程">
-<meta property="og:url" content="http://inmyai.com/2018/05/01/Hexo-Admin-Deploy正确打开方式/index.html">
+<meta property="og:title" content="入门Java:Reference">
+<meta property="og:url" content="http://inmyai.com/2018/05/02/入门Java-Reference/index.html">
 <meta property="og:site_name" content="hlx">
-<meta property="og:description" content="参考hexo-admin/issues 背景由于Windows的某种原因，依据网站的大部分教程，均会抛出deploy Error: spawn UNKNOWN异常。而GitHub上issues给出了相关解决方案，现在总结一下具体的过程(填坑 填坑 打开站点配置文件(\xxxx.github.io\_config.yml)，在admin中加入deployCommand: &amp;#39;sh hexo-d">
+<meta property="og:description" content="引用类型 strong reference(强引用) soft reference(软引用) weak reference(弱引用) phantom reference(虚引用/幽灵引用)  Strong Reference强引用，坚强的引用，233有多强？强到GC(Garbage Collection)从不敢靠近它如何声明这一最强的引用？(#ﾟДﾟ)1String strongReference">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-1/52473923.jpg">
-<meta property="og:updated_time" content="2018-05-02T13:50:18.053Z">
+<meta property="og:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-3/98766925.jpg">
+<meta property="og:updated_time" content="2018-05-02T16:18:05.290Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Admin Deploy扩展教程">
-<meta name="twitter:description" content="参考hexo-admin/issues 背景由于Windows的某种原因，依据网站的大部分教程，均会抛出deploy Error: spawn UNKNOWN异常。而GitHub上issues给出了相关解决方案，现在总结一下具体的过程(填坑 填坑 打开站点配置文件(\xxxx.github.io\_config.yml)，在admin中加入deployCommand: &amp;#39;sh hexo-d">
-<meta name="twitter:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-1/52473923.jpg">
+<meta name="twitter:title" content="入门Java:Reference">
+<meta name="twitter:description" content="引用类型 strong reference(强引用) soft reference(软引用) weak reference(弱引用) phantom reference(虚引用/幽灵引用)  Strong Reference强引用，坚强的引用，233有多强？强到GC(Garbage Collection)从不敢靠近它如何声明这一最强的引用？(#ﾟДﾟ)1String strongReference">
+<meta name="twitter:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-3/98766925.jpg">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://inmyai.com/2018/05/01/Hexo-Admin-Deploy正确打开方式/"/>
+  <link rel="canonical" href="http://inmyai.com/2018/05/02/入门Java-Reference/"/>
 
 
 
 
 
-  <title>Hexo Admin Deploy扩展教程 | hlx</title>
+  <title>入门Java:Reference | hlx</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://inmyai.com/2018/05/01/Hexo-Admin-Deploy正确打开方式/">
+    <link itemprop="mainEntityOfPage" href="http://inmyai.com/2018/05/02/入门Java-Reference/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hlx">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo Admin Deploy扩展教程</h1>
+          <h1 class="post-title" itemprop="name headline">入门Java:Reference</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-01T20:52:00+08:00">
-                2018-05-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T23:23:00+08:00">
+                2018-05-02
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/博客/" itemprop="url" rel="index">
-                    <span itemprop="name">博客</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -378,8 +378,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/05/01/Hexo-Admin-Deploy正确打开方式/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/05/01/Hexo-Admin-Deploy正确打开方式/" itemprop="commentsCount"></span>
+                <a href="/2018/05/02/入门Java-Reference/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/05/02/入门Java-Reference/" itemprop="commentsCount"></span>
                 </a>
               
              
@@ -387,7 +387,7 @@
 
           
           
-             <span id="/2018/05/01/Hexo-Admin-Deploy正确打开方式/" class="leancloud_visitors" data-flag-title="Hexo Admin Deploy扩展教程">
+             <span id="/2018/05/02/入门Java-Reference/" class="leancloud_visitors" data-flag-title="入门Java:Reference">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -423,20 +423,15 @@
       
 
       
-        <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/jaredly/hexo-admin/issues/94" target="_blank" rel="noopener">hexo-admin/issues</a></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于Windows的某种原因，依据网站的大部分教程，均会抛出<code>deploy Error: spawn UNKNOWN</code>异常。而GitHub上issues给出了相关解决方案，现在总结一下具体的过程(填坑</p>
-<h2 id="填坑"><a href="#填坑" class="headerlink" title="填坑"></a>填坑</h2><ul>
-<li><p>打开站点配置文件(<code>\xxxx.github.io\_config.yml</code>)，在<code>admin</code>中加入<code>deployCommand: &#39;sh hexo-deploy.sh&#39;</code>。示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">  username: 看不见</span><br><span class="line">  password_hash: 看不见</span><br><span class="line">  secret: 看不见</span><br><span class="line">  deployCommand: &apos;sh hexo-deploy.sh&apos;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在根目录中(<code>\xxxx.github.io\</code>)新建<code>hexo-deploy.sh</code>文件，内容为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开deploy.js(<code>\xxxx.github.io\node_modules\hexo-admin\deploy.js</code>)，将<code>var proc = spawn(command, [message], {detached: true});</code>更改为<code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;, &#39;-g&#39;]);</code><br>更改完后的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function (command, message, done) &#123;</span><br><span class="line">  done = once(done);</span><br><span class="line">  var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&apos;d&apos;, &apos;-g&apos;]);</span><br><span class="line">  var stdout = &apos;&apos;;</span><br><span class="line">  var stderr = &apos;&apos;;</span><br><span class="line">  proc.stdout.on(&apos;data&apos;, function(data)&#123;stdout += data.toString()&#125;)</span><br><span class="line">  proc.stderr.on(&apos;data&apos;, function(data)&#123;stderr += data.toString()&#125;)</span><br><span class="line">  proc.on(&apos;error&apos;, function(err) &#123;</span><br><span class="line">    done(err, &#123;stdout: stdout, stderr: stderr&#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  proc.on(&apos;close&apos;, function () &#123;</span><br><span class="line">    done(null, &#123;stdout: stdout, stderr: stderr&#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+        <h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><ul>
+<li>strong reference(强引用)</li>
+<li>soft reference(软引用)</li>
+<li>weak reference(弱引用)</li>
+<li>phantom reference(虚引用/幽灵引用)</li>
 </ul>
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-1/52473923.jpg" alt="效果图"></p>
+<h2 id="Strong-Reference"><a href="#Strong-Reference" class="headerlink" title="Strong Reference"></a>Strong Reference</h2><p>强引用，坚强的引用，233<br>有多强？强到GC(Garbage Collection)从不敢靠近它<br>如何声明这一最强的引用？(#ﾟДﾟ)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String strongReference = &quot;strong&quot;;</span><br></pre></td></tr></table></figure></p>
+<p>实际上，这是我们平时编程所使用的。任何在内存中具有强引用的对象(不是变量!)都不会被GC处理掉。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strongReference = null;</span><br></pre></td></tr></table></figure></p>
+<p>执行上句之后，原本的”strong”对象将会缺少有效的引用指向它，则可能会被处理掉，如果GC想要的话。<br>过程:<br><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-3/98766925.jpg" alt="强引用过程图"></p>
 
       
     </div>
@@ -483,9 +478,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+            <a href="/tags/入门/" rel="tag"><i class="fa fa-tag"></i> 入门</a>
           
-            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+            <a href="/tags/总结/" rel="tag"><i class="fa fa-tag"></i> 总结</a>
           
         </div>
       
@@ -513,8 +508,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/01/底部logo栏更改教程/" rel="next" title="NexT 底部logo栏更改教程">
-                <i class="fa fa-chevron-left"></i> NexT 底部logo栏更改教程
+              <a href="/2018/05/02/入门Java-Unbounded-Wildcard-Type-无限制通配符类型/" rel="next" title="入门Java:Unbounded Wildcard Type(无限制通配符类型)">
+                <i class="fa fa-chevron-left"></i> 入门Java:Unbounded Wildcard Type(无限制通配符类型)
               </a>
             
           </div>
@@ -522,10 +517,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/01/入门Java-Row-Types-原生类型/" rel="prev" title="入门Java:Raw Type(原生态类型)">
-                入门Java:Raw Type(原生态类型) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -556,7 +547,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="SOHUCS" sid="Hexo Admin Deploy扩展教程"></div>
+      <div id="SOHUCS" sid="入门Java:Reference"></div>
     </div>
 
   
@@ -701,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#填坑"><span class="nav-number">3.</span> <span class="nav-text">填坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">4.</span> <span class="nav-text">效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引用类型"><span class="nav-number">1.</span> <span class="nav-text">引用类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Strong-Reference"><span class="nav-number">2.</span> <span class="nav-text">Strong Reference</span></a></li></ol></div>
             
 
           </div>
