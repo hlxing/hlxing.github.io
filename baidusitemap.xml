@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://inmyai.com/2018/05/02/%E5%85%A5%E9%97%A8Java-Reference/</loc>
+    <lastmod>2018-05-05T15:13:50.260Z</lastmod>
+    <data>
+        <display>
+        <title>入门Java:Reference(引用)</title>
+        <pubTime>2018-05-02T15:23:00.000Z</pubTime>
+        
+        <tag>入门</tag>
+         
+        <tag>总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://inmyai.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://inmyai.com/2018/05/01/%E5%85%A5%E9%97%A8Java-Row-Types-%E5%8E%9F%E7%94%9F%E7%B1%BB%E5%9E%8B/</loc>
     <lastmod>2018-05-05T09:36:32.023Z</lastmod>
     <data>
@@ -32,28 +54,6 @@
         <display>
         <title>入门Java:Unbounded Wildcard Type(无限制通配符类型)</title>
         <pubTime>2018-05-02T03:36:00.000Z</pubTime>
-        
-        <tag>入门</tag>
-         
-        <tag>总结</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://inmyai.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://inmyai.com/2018/05/02/%E5%85%A5%E9%97%A8Java-Reference/</loc>
-    <lastmod>2018-05-05T09:20:07.460Z</lastmod>
-    <data>
-        <display>
-        <title>入门Java:Reference(引用)</title>
-        <pubTime>2018-05-02T15:23:00.000Z</pubTime>
         
         <tag>入门</tag>
          
