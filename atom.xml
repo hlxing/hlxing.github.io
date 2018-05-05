@@ -121,9 +121,9 @@
       <category term="博客" scheme="http://inmyai.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="教程" scheme="http://inmyai.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="Hexo" scheme="http://inmyai.com/tags/Hexo/"/>
+    
+      <category term="教程" scheme="http://inmyai.com/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
