@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://inmyai.com/about/index.html</loc>
+    
+    <lastmod>2018-05-09T16:17:17.015Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://inmyai.com/2018/05/09/%E5%85%A5%E9%97%A8Java-Declared-vs-Actual-Type-%E7%94%B3%E6%98%8E%E7%B1%BB%E5%9E%8B%E5%AF%B9%E6%AF%94%E5%AE%9E%E9%99%85%E7%B1%BB%E5%9E%8B/</loc>
     
     <lastmod>2018-05-09T16:12:18.485Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://inmyai.com/2018/05/02/%E5%85%A5%E9%97%A8Java-Reference/</loc>
     
     <lastmod>2018-05-09T15:16:04.881Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://inmyai.com/about/index.html</loc>
-    
-    <lastmod>2018-05-05T07:12:26.412Z</lastmod>
     
   </url>
   
