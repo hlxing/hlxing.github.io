@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title>入门Java:Declared vs. Actual Type(申明类型对比实际类型)</title>
+      <link href="/2018/05/09/%E5%85%A5%E9%97%A8Java-Declared-vs-Actual-Type-%E7%94%B3%E6%98%8E%E7%B1%BB%E5%9E%8B%E5%AF%B9%E6%AF%94%E5%AE%9E%E9%99%85%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2018/05/09/%E5%85%A5%E9%97%A8Java-Declared-vs-Actual-Type-%E7%94%B3%E6%98%8E%E7%B1%BB%E5%9E%8B%E5%AF%B9%E6%AF%94%E5%AE%9E%E9%99%85%E7%B1%BB%E5%9E%8B/</url>
+      <content type="html"><![CDATA[<h2 id="动态和静态"><a href="#动态和静态" class="headerlink" title="动态和静态"></a>动态和静态</h2><p>动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。  </p><p>静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子  </p><p>为了更好的区分和识别，可用<code>runtime</code>指代动态，<code>compile-time</code>指代静态。</p><h2 id="申明类型-vs-实际类型"><a href="#申明类型-vs-实际类型" class="headerlink" title="申明类型 vs 实际类型"></a>申明类型 vs 实际类型</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p>每一种变量都有两种类型，一个是声明类型，而另一个就是实际类型。  </p><ul><li>Declared Type:<br>as per the program syntax(由语法制作<br>This is static(静态的，即在<strong>compile-time</strong>确定</li><li>Actual Type:<br>as per its creation(由上帝制作？程序员<br>This is dynamic(动态的，即在<strong>runtime</strong>确定</li></ul><p>举个栗子：<br>首先定义 一个植物类，然后从植物类derive一个类叫做苹果类，最后再从苹果类derive一个类叫做红苹果类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Plant &#123;</span><br><span class="line">&#125;</span><br><span class="line">//植物类</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Apple extends Plant&#123;</span><br><span class="line">&#125;</span><br><span class="line">//苹果类，继承自植物类</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class RedApple extends Apple&#123;</span><br><span class="line">&#125;</span><br><span class="line">//红苹果类，继承自苹果类</span><br></pre></td></tr></table></figure><p>主函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RedApple redApple = new RedApple();</span><br><span class="line">Plant plant = redApple;</span><br><span class="line">Apple apple = redApple;</span><br></pre></td></tr></table></figure></p><p>redApple的实际类型和申明类型为RedApple<br>plant的实际类型为RedApple，申明类型为Plant<br>apple的实际类型为RedApple，申明类型为Apple<br>因此，可见申明类型在编译期间就可以确定，但是实际类型却是未知的，大概是因为编译器只知道plant引用的是redApple，但是redApple的实际类型却不知道  </p><p>TODO:<br> 今天天气有点冷。。。</p>]]></content>
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 入门 </tag>
+            
+            <tag> 总结 </tag>
+            
+            <tag> Declared Type </tag>
+            
+            <tag> Actual Type </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>入门Java:Reference(引用)</title>
       <link href="/2018/05/02/%E5%85%A5%E9%97%A8Java-Reference/"/>
       <url>/2018/05/02/%E5%85%A5%E9%97%A8Java-Reference/</url>
@@ -20,6 +47,8 @@
             <tag> 入门 </tag>
             
             <tag> 总结 </tag>
+            
+            <tag> Reference </tag>
             
         </tags>
       
@@ -44,6 +73,8 @@
             
             <tag> 总结 </tag>
             
+            <tag> Unbounded Wildcard Type </tag>
+            
         </tags>
       
     </entry>
@@ -66,6 +97,8 @@
             <tag> 入门 </tag>
             
             <tag> 总结 </tag>
+            
+            <tag> Raw Type </tag>
             
         </tags>
       

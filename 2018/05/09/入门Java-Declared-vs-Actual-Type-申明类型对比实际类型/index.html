@@ -78,7 +78,7 @@ var _hmt = _hmt || [];
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="入门,总结,Declared Type,Actual Type," />
 
 
 
@@ -91,16 +91,18 @@ var _hmt = _hmt || [];
 
 
 
-<meta name="description" content="A happy Porter">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hlx">
-<meta property="og:url" content="http://inmyai.com/archives/index.html">
+<meta name="description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子   为了更好的区分和识别，可用">
+<meta name="keywords" content="入门,总结,Declared Type,Actual Type">
+<meta property="og:type" content="article">
+<meta property="og:title" content="入门Java:Declared vs. Actual Type(申明类型对比实际类型)">
+<meta property="og:url" content="http://inmyai.com/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/index.html">
 <meta property="og:site_name" content="hlx">
-<meta property="og:description" content="A happy Porter">
+<meta property="og:description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子   为了更好的区分和识别，可用">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-09T16:12:18.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hlx">
-<meta name="twitter:description" content="A happy Porter">
+<meta name="twitter:title" content="入门Java:Declared vs. Actual Type(申明类型对比实际类型)">
+<meta name="twitter:description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子   为了更好的区分和识别，可用">
 
 
 
@@ -130,13 +132,13 @@ var _hmt = _hmt || [];
 
 
 
-  <link rel="canonical" href="http://inmyai.com/archives/"/>
+  <link rel="canonical" href="http://inmyai.com/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/"/>
 
 
 
 
 
-  <title>归档 | hlx</title>
+  <title>入门Java:Declared vs. Actual Type(申明类型对比实际类型) | hlx</title>
   
 
 
@@ -157,7 +159,7 @@ var _hmt = _hmt || [];
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,407 +297,244 @@ var _hmt = _hmt || [];
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://inmyai.com/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hlx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-28/72384119.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hlx">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">入门Java:Declared vs. Actual Type(申明类型对比实际类型)</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-09T23:15:00+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/" itemprop="url">
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
               
-                <span itemprop="name">入门Java:Declared vs. Actual Type(申明类型对比实际类型)</span>
+                <a href="/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/" itemprop="commentsCount"></span>
+                </a>
               
-            </a>
-        
-      </h2>
+             
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-09T23:15:00+08:00"
-              content="2018-05-09" >
-          05-09
-        </time>
-      </div>
+          
+          
+             <span id="/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/" class="leancloud_visitors" data-flag-title="入门Java:Declared vs. Actual Type(申明类型对比实际类型)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-    </header>
-  </article>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
+          
 
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/02/入门Java-Reference/" itemprop="url">
-              
-                <span itemprop="name">入门Java:Reference(引用)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-02T23:23:00+08:00"
-              content="2018-05-02" >
-          05-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/02/入门Java-Unbounded-Wildcard-Type-无限制通配符类型/" itemprop="url">
-              
-                <span itemprop="name">入门Java:Unbounded Wildcard Type(无限制通配符类型)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-02T11:36:00+08:00"
-              content="2018-05-02" >
-          05-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="动态和静态"><a href="#动态和静态" class="headerlink" title="动态和静态"></a>动态和静态</h2><p>动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。  </p>
+<p>静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子  </p>
+<p>为了更好的区分和识别，可用<code>runtime</code>指代动态，<code>compile-time</code>指代静态。</p>
+<h2 id="申明类型-vs-实际类型"><a href="#申明类型-vs-实际类型" class="headerlink" title="申明类型 vs 实际类型"></a>申明类型 vs 实际类型</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p>每一种变量都有两种类型，一个是声明类型，而另一个就是实际类型。  </p>
+<ul>
+<li>Declared Type:<br>as per the program syntax(由语法制作<br>This is static(静态的，即在<strong>compile-time</strong>确定</li>
+<li>Actual Type:<br>as per its creation(由上帝制作？程序员<br>This is dynamic(动态的，即在<strong>runtime</strong>确定</li>
+</ul>
+<p>举个栗子：<br>首先定义 一个植物类，然后从植物类derive一个类叫做苹果类，最后再从苹果类derive一个类叫做红苹果类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Plant &#123;</span><br><span class="line">&#125;</span><br><span class="line">//植物类</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Apple extends Plant&#123;</span><br><span class="line">&#125;</span><br><span class="line">//苹果类，继承自植物类</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class RedApple extends Apple&#123;</span><br><span class="line">&#125;</span><br><span class="line">//红苹果类，继承自苹果类</span><br></pre></td></tr></table></figure>
+<p>主函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RedApple redApple = new RedApple();</span><br><span class="line">Plant plant = redApple;</span><br><span class="line">Apple apple = redApple;</span><br></pre></td></tr></table></figure></p>
+<p>redApple的实际类型和申明类型为RedApple<br>plant的实际类型为RedApple，申明类型为Plant<br>apple的实际类型为RedApple，申明类型为Apple<br>因此，可见申明类型在编译期间就可以确定，但是实际类型却是未知的，大概是因为编译器只知道plant引用的是redApple，但是redApple的实际类型却不知道  </p>
+<p>TODO:<br> 今天天气有点冷。。。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/01/入门Java-Row-Types-原生类型/" itemprop="url">
-              
-                <span itemprop="name">入门Java:Raw Type(原生态类型)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T23:30:00+08:00"
-              content="2018-05-01" >
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/01/Hexo-Admin-Deploy正确打开方式/" itemprop="url">
-              
-                <span itemprop="name">Hexo Admin Deploy扩展教程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T20:52:00+08:00"
-              content="2018-05-01" >
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/01/底部logo栏更改教程/" itemprop="url">
-              
-                <span itemprop="name">NexT 底部logo栏更改教程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T20:41:00+08:00"
-              content="2018-05-01" >
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/01/Live2D-模块安装教程/" itemprop="url">
-              
-                <span itemprop="name">NexT Live2D模块安装教程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T19:55:00+08:00"
-              content="2018-05-01" >
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/30/GitHub-Pages-腾讯云CDN加速教程/" itemprop="url">
-              
-                <span itemprop="name"> GitHub Pages 腾讯云CDN加速教程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-30T20:48:00+08:00"
-              content="2018-04-30" >
-          04-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/29/博客搭建指南/" itemprop="url">
-              
-                <span itemprop="name">博客搭建指南</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-29T21:44:00+08:00"
-              content="2018-04-29" >
-          04-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/27/hello-blog/" itemprop="url">
-              
-                <span itemprop="name">hello blog</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-27T17:13:00+08:00"
-              content="2018-04-27" >
-          04-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-5/21287685.jpg" alt="hlx 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-5/88152682.jpg" alt="hlx 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/入门/" rel="tag"><i class="fa fa-tag"></i> 入门</a>
+          
+            <a href="/tags/总结/" rel="tag"><i class="fa fa-tag"></i> 总结</a>
+          
+            <a href="/tags/Declared-Type/" rel="tag"><i class="fa fa-tag"></i> Declared Type</a>
+          
+            <a href="/tags/Actual-Type/" rel="tag"><i class="fa fa-tag"></i> Actual Type</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/02/入门Java-Reference/" rel="next" title="入门Java:Reference(引用)">
+                <i class="fa fa-chevron-left"></i> 入门Java:Reference(引用)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -703,6 +542,15 @@ var _hmt = _hmt || [];
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS" sid="入门Java:Declared vs. Actual Type(申明类型对比实际类型)"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -723,8 +571,17 @@ var _hmt = _hmt || [];
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -823,6 +680,22 @@ var _hmt = _hmt || [];
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动态和静态"><span class="nav-number">1.</span> <span class="nav-text">动态和静态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#申明类型-vs-实际类型"><span class="nav-number">2.</span> <span class="nav-text">申明类型 vs 实际类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-概念"><span class="nav-number">2.1.</span> <span class="nav-text">1.概念</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -992,6 +865,10 @@ var _hmt = _hmt || [];
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
