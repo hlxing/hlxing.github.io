@@ -3,13 +3,12 @@
 
 
     
-    
   <url>
     <loc>http://inmyai.com/2018/05/09/%E5%85%A5%E9%97%A8Java-Declared-vs-Actual-Type-%E7%94%B3%E6%98%8E%E7%B1%BB%E5%9E%8B%E5%AF%B9%E6%AF%94%E5%AE%9E%E9%99%85%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2018-05-09T16:12:18.485Z</lastmod>
+    <lastmod>2018-05-10T09:12:06.043Z</lastmod>
     <data>
         <display>
-        <title>入门Java:Declared vs. Actual Type(申明类型对比实际类型)</title>
+        <title>入门Java:Declared vs. Actual Type(声明类型对比实际类型)</title>
         <pubTime>2018-05-09T15:15:00.000Z</pubTime>
         
         <tag>入门</tag>
@@ -29,6 +28,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://inmyai.com/2018/05/01/%E5%85%A5%E9%97%A8Java-Row-Types-%E5%8E%9F%E7%94%9F%E7%B1%BB%E5%9E%8B/</loc>

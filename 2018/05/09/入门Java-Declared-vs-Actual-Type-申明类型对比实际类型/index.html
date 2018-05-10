@@ -91,18 +91,18 @@ var _hmt = _hmt || [];
 
 
 
-<meta name="description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子   为了更好的区分和识别，可用">
+<meta name="description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，子类重载父类的方法，对象的类型决定执行子类或是父类的方法，而对象的类型需要在运行期间才能确定。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，类的final方法即是静态的，无法被覆盖，对象执行该方法时具有确定性。 为了更好的区分和识别，可用runtime指代动态，comp">
 <meta name="keywords" content="入门,总结,Declared Type,Actual Type">
 <meta property="og:type" content="article">
-<meta property="og:title" content="入门Java:Declared vs. Actual Type(申明类型对比实际类型)">
+<meta property="og:title" content="入门Java:Declared vs. Actual Type(声明类型对比实际类型)">
 <meta property="og:url" content="http://inmyai.com/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/index.html">
 <meta property="og:site_name" content="hlx">
-<meta property="og:description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子   为了更好的区分和识别，可用">
+<meta property="og:description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，子类重载父类的方法，对象的类型决定执行子类或是父类的方法，而对象的类型需要在运行期间才能确定。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，类的final方法即是静态的，无法被覆盖，对象执行该方法时具有确定性。 为了更好的区分和识别，可用runtime指代动态，comp">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T16:12:18.485Z">
+<meta property="og:updated_time" content="2018-05-10T09:12:06.043Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="入门Java:Declared vs. Actual Type(申明类型对比实际类型)">
-<meta name="twitter:description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子   为了更好的区分和识别，可用">
+<meta name="twitter:title" content="入门Java:Declared vs. Actual Type(声明类型对比实际类型)">
+<meta name="twitter:description" content="动态和静态动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，子类重载父类的方法，对象的类型决定执行子类或是父类的方法，而对象的类型需要在运行期间才能确定。   静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，类的final方法即是静态的，无法被覆盖，对象执行该方法时具有确定性。 为了更好的区分和识别，可用runtime指代动态，comp">
 
 
 
@@ -138,7 +138,7 @@ var _hmt = _hmt || [];
 
 
 
-  <title>入门Java:Declared vs. Actual Type(申明类型对比实际类型) | hlx</title>
+  <title>入门Java:Declared vs. Actual Type(声明类型对比实际类型) | hlx</title>
   
 
 
@@ -328,7 +328,7 @@ var _hmt = _hmt || [];
 
         
         
-          <h1 class="post-title" itemprop="name headline">入门Java:Declared vs. Actual Type(申明类型对比实际类型)</h1>
+          <h1 class="post-title" itemprop="name headline">入门Java:Declared vs. Actual Type(声明类型对比实际类型)</h1>
         
 
         <div class="post-meta">
@@ -391,7 +391,7 @@ var _hmt = _hmt || [];
 
           
           
-             <span id="/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/" class="leancloud_visitors" data-flag-title="入门Java:Declared vs. Actual Type(申明类型对比实际类型)">
+             <span id="/2018/05/09/入门Java-Declared-vs-Actual-Type-申明类型对比实际类型/" class="leancloud_visitors" data-flag-title="入门Java:Declared vs. Actual Type(声明类型对比实际类型)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -427,20 +427,31 @@ var _hmt = _hmt || [];
       
 
       
-        <h2 id="动态和静态"><a href="#动态和静态" class="headerlink" title="动态和静态"></a>动态和静态</h2><p>动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，常见的反射处理，我们可以手动输入类中一个方法，然后通过反射动态的执行该方法。而这一切都是在运行期间所决定的。  </p>
-<p>静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，平时编写的判断逻辑代码，编译完也就确定了，运行期间也不会发生改变。(暂时想不出好例子  </p>
+        <h2 id="动态和静态"><a href="#动态和静态" class="headerlink" title="动态和静态"></a>动态和静态</h2><p>动态 == 事物本身的状态是可以随着外部因素而改变。一般指的就是程序的运行期间。例如，子类重载父类的方法，对象的类型决定执行子类或是父类的方法，而对象的类型需要在运行期间才能确定。  </p>
+<p>静态 == 事物本身的状态一直保持不变。一般指的就是程序的编译期间。例如，类的final方法即是静态的，无法被覆盖，对象执行该方法时具有确定性。</p>
 <p>为了更好的区分和识别，可用<code>runtime</code>指代动态，<code>compile-time</code>指代静态。</p>
-<h2 id="申明类型-vs-实际类型"><a href="#申明类型-vs-实际类型" class="headerlink" title="申明类型 vs 实际类型"></a>申明类型 vs 实际类型</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p>每一种变量都有两种类型，一个是声明类型，而另一个就是实际类型。  </p>
+<h2 id="声明类型-vs-实际类型"><a href="#声明类型-vs-实际类型" class="headerlink" title="声明类型 vs 实际类型"></a>声明类型 vs 实际类型</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p>每一种变量都有两种类型，一个是声明类型，而另一个就是实际类型。  </p>
 <ul>
 <li>Declared Type:<br>as per the program syntax(由语法制作<br>This is static(静态的，即在<strong>compile-time</strong>确定</li>
 <li>Actual Type:<br>as per its creation(由上帝制作？程序员<br>This is dynamic(动态的，即在<strong>runtime</strong>确定</li>
 </ul>
-<p>举个栗子：<br>首先定义 一个植物类，然后从植物类derive一个类叫做苹果类，最后再从苹果类derive一个类叫做红苹果类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Plant &#123;</span><br><span class="line">&#125;</span><br><span class="line">//植物类</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Apple extends Plant&#123;</span><br><span class="line">&#125;</span><br><span class="line">//苹果类，继承自植物类</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class RedApple extends Apple&#123;</span><br><span class="line">&#125;</span><br><span class="line">//红苹果类，继承自苹果类</span><br></pre></td></tr></table></figure>
-<p>主函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RedApple redApple = new RedApple();</span><br><span class="line">Plant plant = redApple;</span><br><span class="line">Apple apple = redApple;</span><br></pre></td></tr></table></figure></p>
-<p>redApple的实际类型和申明类型为RedApple<br>plant的实际类型为RedApple，申明类型为Plant<br>apple的实际类型为RedApple，申明类型为Apple<br>因此，可见申明类型在编译期间就可以确定，但是实际类型却是未知的，大概是因为编译器只知道plant引用的是redApple，但是redApple的实际类型却不知道  </p>
-<p>TODO:<br> 今天天气有点冷。。。</p>
+<p>举个栗子：<br>首先定义以下三个类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class Plant &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">//植物类</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Apple extends Plant&#123;</span><br><span class="line"></span><br><span class="line">    public void hello() &#123;</span><br><span class="line">        System.out.println(&quot;i am an apple&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//苹果类，继承自植物类</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class RedApple extends Apple&#123;</span><br><span class="line"></span><br><span class="line">    public void hello() &#123;</span><br><span class="line">        System.out.println(&quot;i am a redApple&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void show() &#123;</span><br><span class="line">        System.out.println(&quot;a redApple&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//红苹果类，继承自苹果类</span><br></pre></td></tr></table></figure>
+<p>主函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Apple apple = new RedApple();</span><br></pre></td></tr></table></figure></p>
+<p>apple的申明类型为Apple，但是实际类型是RedApple。<br>实际上，<strong>apple变量引用的究竟是Apple对象还是RedApple对象</strong>，编译器是无法知道的，只能等到<code>runtime</code>才可以确定。而<strong>apple变量的申明类型Apple</strong>是确定的，这辈子都不可能更改声明对象。因此，<code>declared type</code>属于<code>static</code>，而<code>actual type</code>属于<code>dynamic</code></p>
+<h3 id="2-特点"><a href="#2-特点" class="headerlink" title="2.特点"></a>2.特点</h3><ul>
+<li>声明类型决定了方法的范围<br>尽管apple的实际类型是RedApple，但它是被禁止使用RedApple专属的 show()方法。试想：如果重新分配apple给Apple对象，然后执行RedApple专属方法，那么程序将会瞬间崩溃，而编译器又无法确定对象类型(只能在运行期间确定)。因此，这一规定也合乎情理。</li>
+<li>实际类型决定了方法的版本<br>当调用apple的hello()方法(被RedApple overridden)，那么它究竟是执行RedApple版本的方法，还是Apple版本的方法？<br>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Apple apple = new RedApple();</span><br><span class="line">apple.hello();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Output：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i am a redApple</span><br></pre></td></tr></table></figure></p>
+<p>方法的执行是在运行期间，而同时运行期间能够确定变量所引用的对象的类型。这一行为称为<code>Dynamic Dispatch</code>。因此，方法的版本取决于实际类型。</p>
+<h3 id="3-大坑"><a href="#3-大坑" class="headerlink" title="3.大坑"></a>3.大坑</h3><ul>
+<li>我们经常分配父类变量给子类对象。如：<code>Apple apple = new RedApple();</code>。而规定中有这么一条：只能分配申明类型为X的变量给申明类型为Y(Y为X的子类型)的变量。因此，如果代码换成如下：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Plant plant = new RedApple();</span><br><span class="line">Apple apple = plant;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>乍一看，好像是正确的，然而抛出警告<code>Incompatible types</code>。不兼容的类型！事实上，背锅的编译器只能假设plant的实际类型就是申明类型Plant，为保护世界和平，不允许这种情况发生，只能依靠声明类型之间的关系进行分配。<br>但是！程序员到底还是上帝一般的存在，通过强制转换，<code>Apple apple = (RedApple) plant;</code>完美进行分配。</p>
 
       
     </div>
@@ -545,7 +556,7 @@ var _hmt = _hmt || [];
 
   
     <div class="comments" id="comments">
-      <div id="SOHUCS" sid="入门Java:Declared vs. Actual Type(申明类型对比实际类型)"></div>
+      <div id="SOHUCS" sid="入门Java:Declared vs. Actual Type(声明类型对比实际类型)"></div>
     </div>
 
   
@@ -690,7 +701,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动态和静态"><span class="nav-number">1.</span> <span class="nav-text">动态和静态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#申明类型-vs-实际类型"><span class="nav-number">2.</span> <span class="nav-text">申明类型 vs 实际类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-概念"><span class="nav-number">2.1.</span> <span class="nav-text">1.概念</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动态和静态"><span class="nav-number">1.</span> <span class="nav-text">动态和静态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明类型-vs-实际类型"><span class="nav-number">2.</span> <span class="nav-text">声明类型 vs 实际类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-概念"><span class="nav-number">2.1.</span> <span class="nav-text">1.概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-特点"><span class="nav-number">2.2.</span> <span class="nav-text">2.特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-大坑"><span class="nav-number">2.3.</span> <span class="nav-text">3.大坑</span></a></li></ol></li></ol></div>
             
 
           </div>
