@@ -91,18 +91,18 @@ var _hmt = _hmt || [];
 
 
 
-<meta name="description" content="概念Bounded Wildcard Type 相对于 UnBounded Wildcard Type 多了一个对于类型参数的限制，即提供了一种有限制的”灵活”。门下有两个徒弟，一个名为Upper Bounded Wildcards(上层限制通配符)，而另一个名为Lower Bounded Wildcards(下层限制通配符) TODO:nothing…….">
+<meta name="description" content="概念Bounded Wildcard Type 相对于 UnBounded Wildcard Type 多了一个对于类型参数的限制，即提供了一种有限制的”灵活”。门下有两个徒弟，一个名为Upper Bounded Wildcards(上层限制通配符)，而另一个名为Lower Bounded Wildcards(下层限制通配符)  Upper Bounded Wildcards 上层限制通配符，即限">
 <meta property="og:type" content="article">
 <meta property="og:title" content="入门Java:Bounded  Wildcard Type(有限制通配符类型)">
 <meta property="og:url" content="http://inmyai.com/2018/05/13/入门Java-Bounded-Wildcard-Type-有限制通配符类型/index.html">
 <meta property="og:site_name" content="hlx">
-<meta property="og:description" content="概念Bounded Wildcard Type 相对于 UnBounded Wildcard Type 多了一个对于类型参数的限制，即提供了一种有限制的”灵活”。门下有两个徒弟，一个名为Upper Bounded Wildcards(上层限制通配符)，而另一个名为Lower Bounded Wildcards(下层限制通配符) TODO:nothing…….">
+<meta property="og:description" content="概念Bounded Wildcard Type 相对于 UnBounded Wildcard Type 多了一个对于类型参数的限制，即提供了一种有限制的”灵活”。门下有两个徒弟，一个名为Upper Bounded Wildcards(上层限制通配符)，而另一个名为Lower Bounded Wildcards(下层限制通配符)  Upper Bounded Wildcards 上层限制通配符，即限">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-13/76775018.jpg">
-<meta property="og:updated_time" content="2018-05-13T15:54:53.462Z">
+<meta property="og:updated_time" content="2018-05-14T15:37:54.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="入门Java:Bounded  Wildcard Type(有限制通配符类型)">
-<meta name="twitter:description" content="概念Bounded Wildcard Type 相对于 UnBounded Wildcard Type 多了一个对于类型参数的限制，即提供了一种有限制的”灵活”。门下有两个徒弟，一个名为Upper Bounded Wildcards(上层限制通配符)，而另一个名为Lower Bounded Wildcards(下层限制通配符) TODO:nothing…….">
+<meta name="twitter:description" content="概念Bounded Wildcard Type 相对于 UnBounded Wildcard Type 多了一个对于类型参数的限制，即提供了一种有限制的”灵活”。门下有两个徒弟，一个名为Upper Bounded Wildcards(上层限制通配符)，而另一个名为Lower Bounded Wildcards(下层限制通配符)  Upper Bounded Wildcards 上层限制通配符，即限">
 <meta name="twitter:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-13/76775018.jpg">
 
 
@@ -407,8 +407,11 @@ var _hmt = _hmt || [];
 
       
         <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>Bounded Wildcard Type 相对于 UnBounded Wildcard Type 多了一个对于类型参数的限制，即提供了一种有限制的”灵活”。门下有两个徒弟，一个名为Upper Bounded Wildcards(上层限制通配符)，而另一个名为Lower Bounded Wildcards(下层限制通配符)</p>
-<p>TODO:nothing…….</p>
-<p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-13/76775018.jpg" alt=""></p>
+<ul>
+<li>Upper Bounded Wildcards 上层限制通配符，即限制了？的最高父类级别。用法：<code>? extends A</code>，则说明parameter type(类型参数)只能为A的子类型或者A</li>
+<li>Lower Bounded Wildcards 下层限制通配符，与楼上的相反，即限制了？的最低子类级别。用法：<code>? super A</code>，则说明parameter type只能为A的父类型或者A</li>
+</ul>
+<p>TODO:nothing…….<br><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-13/76775018.jpg" alt=""></p>
 
       
     </div>
