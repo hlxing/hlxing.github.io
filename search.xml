@@ -6,7 +6,7 @@
       <title>入门Sql:Normal Form(范式)</title>
       <link href="/2018/05/14/%E5%85%A5%E9%97%A8Sql-Normal-Form-%E8%8C%83%E5%BC%8F/"/>
       <url>/2018/05/14/%E5%85%A5%E9%97%A8Sql-Normal-Form-%E8%8C%83%E5%BC%8F/</url>
-      <content type="html"><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>学校的数据库书关于范式的定义有些杂乱，用户体验不佳。因此，博主从墙外搬了几块砖头进来，以此体验原滋原味的Normal Form</p><h3 id="First-Normal-Form"><a href="#First-Normal-Form" class="headerlink" title="First Normal Form"></a>First Normal Form</h3><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><p>A database is in first normal form if it satisfies the following conditions:</p><ul><li>Contains only atomic values</li><li>There are no repeating groups</li></ul><h3 id="2-示例"><a href="#2-示例" class="headerlink" title="2.示例"></a>2.示例</h3>]]></content>
+      <content type="html"><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>学校的数据库书关于范式的定义有些杂乱，用户体验不佳。因此，博主从墙外搬了几块砖头进来，以此体验原滋原味的Normal Form</p><h3 id="First-Normal-Form"><a href="#First-Normal-Form" class="headerlink" title="First Normal Form"></a>First Normal Form</h3><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><p>A database is in first normal form if it satisfies the following conditions:</p><ul><li>Contains only atomic values</li><li>There are no repeating groups</li></ul><h3 id="2-示例"><a href="#2-示例" class="headerlink" title="2.示例"></a>2.示例</h3><p>//TODO:</p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-14/77459532.jpg" alt=""></p>]]></content>
       
       <categories>
           
