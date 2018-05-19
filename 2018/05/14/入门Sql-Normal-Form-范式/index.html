@@ -105,7 +105,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-19/54371245.jpg">
 <meta property="og:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-19/20320369.jpg">
 <meta property="og:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-19/30052179.jpg">
-<meta property="og:updated_time" content="2018-05-19T01:25:12.220Z">
+<meta property="og:updated_time" content="2018-05-19T02:48:10.977Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="入门Sql:Normal Form(范式)">
 <meta name="twitter:description" content="引言学校的数据库书关于范式的定义有些杂乱，用户体验不佳。因此，博主从墙外搬了几块砖头进来，以此体验原滋原味的Normal Form First Normal Form1.定义A database is in first normal form if it satisfies the following conditions:  Contains only atomic values There a">
@@ -435,14 +435,14 @@ var _hmt = _hmt || [];
 
       
         <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>学校的数据库书关于范式的定义有些杂乱，用户体验不佳。因此，博主从墙外搬了几块砖头进来，以此体验原滋原味的Normal Form</p>
-<h3 id="First-Normal-Form"><a href="#First-Normal-Form" class="headerlink" title="First Normal Form"></a>First Normal Form</h3><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><p>A database is in first normal form if it satisfies the following conditions:</p>
+<h3 id="First-Normal-Form"><a href="#First-Normal-Form" class="headerlink" title="First Normal Form"></a>First Normal Form</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><p>A database is in first normal form if it satisfies the following conditions:</p>
 <ul>
 <li>Contains only atomic values</li>
 <li>There are no repeating groups</li>
 </ul>
 <p>An atomic value is a value that cannot be divided. For example, in the table shown below, the values in the [Color] column in the first row can be divided into “red” and “green”, hence [TABLE_PRODUCT] is not in 1NF.</p>
 <p>A repeating group means that a table contains two or more columns that are closely related. For example, a table that records data on a book and its author(s) with the following columns: [Book ID], [Author 1], [Author 2], [Author 3] is not in 1NF because [Author 1], [Author 2], and [Author 3] are all repeating the same attribute.</p>
-<h3 id="2-示例"><a href="#2-示例" class="headerlink" title="2.示例"></a>2.示例</h3><p>How do we bring an unnormalized table into first normal form? Consider the following example:</p>
+<h4 id="2-示例"><a href="#2-示例" class="headerlink" title="2.示例"></a>2.示例</h4><p>How do we bring an unnormalized table into first normal form? Consider the following example:</p>
 <p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-19/25240910.jpg" alt=""></p>
 <p>This table is not in first normal form because the [Color] column can contain multiple values. For example, the first row includes values “red” and “green.”</p>
 <p>To bring this table to first normal form, we split the table into two tables and now we have the resulting tables:</p>
@@ -720,7 +720,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#First-Normal-Form"><span class="nav-number">2.</span> <span class="nav-text">First Normal Form</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-定义"><span class="nav-number">3.</span> <span class="nav-text">1.定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-示例"><span class="nav-number">4.</span> <span class="nav-text">2.示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Second-Normal-Form"><span class="nav-number">5.</span> <span class="nav-text">Second Normal Form</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义-1"><span class="nav-number">5.1.</span> <span class="nav-text">1.定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-示例-1"><span class="nav-number">5.2.</span> <span class="nav-text">2.示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Third-Normal-Form"><span class="nav-number">6.</span> <span class="nav-text">Third Normal Form</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义-2"><span class="nav-number">6.1.</span> <span class="nav-text">1.定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-示例-2"><span class="nav-number">6.2.</span> <span class="nav-text">2.示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#来源"><span class="nav-number">7.</span> <span class="nav-text">来源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#First-Normal-Form"><span class="nav-number">2.</span> <span class="nav-text">First Normal Form</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义"><span class="nav-number">2.1.</span> <span class="nav-text">1.定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-示例"><span class="nav-number">2.2.</span> <span class="nav-text">2.示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Second-Normal-Form"><span class="nav-number">3.</span> <span class="nav-text">Second Normal Form</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义-1"><span class="nav-number">3.1.</span> <span class="nav-text">1.定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-示例-1"><span class="nav-number">3.2.</span> <span class="nav-text">2.示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Third-Normal-Form"><span class="nav-number">4.</span> <span class="nav-text">Third Normal Form</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义-2"><span class="nav-number">4.1.</span> <span class="nav-text">1.定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-示例-2"><span class="nav-number">4.2.</span> <span class="nav-text">2.示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#来源"><span class="nav-number">5.</span> <span class="nav-text">来源</span></a></li></ol></div>
             
 
           </div>
