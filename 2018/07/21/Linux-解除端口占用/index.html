@@ -78,7 +78,7 @@ var _hmt = _hmt || [];
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="端口,探讨," />
 
 
 
@@ -91,16 +91,18 @@ var _hmt = _hmt || [];
 
 
 
-<meta name="description" content="A happy Porter">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hlx">
-<meta property="og:url" content="http://inmyai.com/archives/2018/page/2/index.html">
+<meta name="description" content="查看端口是否被占用(所属的网络协议)netstat -anp | grep 端口号 查看端口号所属进程fuser -v -n 网络协议 端口号，网络协议例如：tcp，udp 杀掉进程kill -s 9 进程标识号，进程标记号即为PID Netstat定义监控TCP/UDP的工具，用于显示个人网络连接的详细信息。大胆假设，netstat为Net Status的缩写，即网络状态 用法直接窗口命令行输入">
+<meta name="keywords" content="端口,探讨">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux:解除端口占用 [探讨篇]">
+<meta property="og:url" content="http://inmyai.com/2018/07/21/Linux-解除端口占用/index.html">
 <meta property="og:site_name" content="hlx">
-<meta property="og:description" content="A happy Porter">
+<meta property="og:description" content="查看端口是否被占用(所属的网络协议)netstat -anp | grep 端口号 查看端口号所属进程fuser -v -n 网络协议 端口号，网络协议例如：tcp，udp 杀掉进程kill -s 9 进程标识号，进程标记号即为PID Netstat定义监控TCP/UDP的工具，用于显示个人网络连接的详细信息。大胆假设，netstat为Net Status的缩写，即网络状态 用法直接窗口命令行输入">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-21T08:40:41.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hlx">
-<meta name="twitter:description" content="A happy Porter">
+<meta name="twitter:title" content="Linux:解除端口占用 [探讨篇]">
+<meta name="twitter:description" content="查看端口是否被占用(所属的网络协议)netstat -anp | grep 端口号 查看端口号所属进程fuser -v -n 网络协议 端口号，网络协议例如：tcp，udp 杀掉进程kill -s 9 进程标识号，进程标记号即为PID Netstat定义监控TCP/UDP的工具，用于显示个人网络连接的详细信息。大胆假设，netstat为Net Status的缩写，即网络状态 用法直接窗口命令行输入">
 
 
 
@@ -130,13 +132,13 @@ var _hmt = _hmt || [];
 
 
 
-  <link rel="canonical" href="http://inmyai.com/archives/2018/page/2/"/>
+  <link rel="canonical" href="http://inmyai.com/2018/07/21/Linux-解除端口占用/"/>
 
 
 
 
 
-  <title>归档 | hlx</title>
+  <title>Linux:解除端口占用 [探讨篇] | hlx</title>
   
 
 
@@ -157,7 +159,7 @@ var _hmt = _hmt || [];
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,189 +297,248 @@ var _hmt = _hmt || [];
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://inmyai.com/2018/07/21/Linux-解除端口占用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hlx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-4-28/72384119.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hlx">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Linux:解除端口占用 [探讨篇]</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-21T15:04:00+08:00">
+                2018-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 14 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/01/Live2D-模块安装教程/" itemprop="url">
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
               
-                <span itemprop="name">NexT Live2D模块安装教程</span>
+                <a href="/2018/07/21/Linux-解除端口占用/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/07/21/Linux-解除端口占用/" itemprop="commentsCount"></span>
+                </a>
               
-            </a>
-        
-      </h2>
+             
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T19:55:00+08:00"
-              content="2018-05-01" >
-          05-01
-        </time>
-      </div>
+          
+          
+             <span id="/2018/07/21/Linux-解除端口占用/" class="leancloud_visitors" data-flag-title="Linux:解除端口占用 [探讨篇]">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-    </header>
-  </article>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
+          
 
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/30/GitHub-Pages-腾讯云CDN加速教程/" itemprop="url">
-              
-                <span itemprop="name"> GitHub Pages 腾讯云CDN加速教程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-30T20:48:00+08:00"
-              content="2018-04-30" >
-          04-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/29/博客搭建指南/" itemprop="url">
-              
-                <span itemprop="name">博客搭建指南</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-29T21:44:00+08:00"
-              content="2018-04-29" >
-          04-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="查看端口是否被占用-所属的网络协议"><a href="#查看端口是否被占用-所属的网络协议" class="headerlink" title="查看端口是否被占用(所属的网络协议)"></a>查看端口是否被占用(所属的网络协议)</h3><p><code>netstat -anp | grep 端口号</code></p>
+<h3 id="查看端口号所属进程"><a href="#查看端口号所属进程" class="headerlink" title="查看端口号所属进程"></a>查看端口号所属进程</h3><p><code>fuser -v -n 网络协议 端口号</code>，网络协议例如：tcp，udp</p>
+<h3 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h3><p><code>kill -s 9 进程标识号</code>，进程标记号即为PID</p>
+<h3 id="Netstat"><a href="#Netstat" class="headerlink" title="Netstat"></a>Netstat</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>监控TCP/UDP的工具，用于显示个人网络连接的详细信息。大胆假设，netstat为Net Status的缩写，即网络状态</p>
+<h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><p>直接窗口命令行输入<code>netstat /?</code>，一份api文档就出炉了</p>
+<ul>
+<li><p>Win10环境下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">NETSTAT [-a] [-b] [-e] [-f] [-n] [-o] [-p proto] [-r] [-s] [-x] [-t] [interval]</span><br><span class="line"></span><br><span class="line">  -a            显示所有连接和侦听端口。</span><br><span class="line">  -b            显示在创建每个连接或侦听端口时涉及的</span><br><span class="line">                可执行程序。在某些情况下，已知可执行程序承载</span><br><span class="line">                多个独立的组件，这些情况下，</span><br><span class="line">                显示创建连接或侦听端口时</span><br><span class="line">                涉及的组件序列。在此情况下，可执行程序的</span><br><span class="line">                名称位于底部 [] 中，它调用的组件位于顶部，</span><br><span class="line">                直至达到 TCP/IP。注意，此选项</span><br><span class="line">                可能很耗时，并且在你没有足够</span><br><span class="line">                权限时可能失败。</span><br><span class="line">  -e            显示以太网统计信息。此选项可以与 -s 选项</span><br><span class="line">                结合使用。</span><br><span class="line">  -f            显示外部地址的完全限定</span><br><span class="line">                域名(FQDN)。</span><br><span class="line">  -n            以数字形式显示地址和端口号。</span><br><span class="line">  -o            显示拥有的与每个连接关联的进程 ID。</span><br><span class="line">  -p proto      显示 proto 指定的协议的连接；proto</span><br><span class="line">                可以是下列任何一个: TCP、UDP、TCPv6 或 UDPv6。如果与 -s</span><br><span class="line">                选项一起用来显示每个协议的统计信息，proto 可以是下列任何一个:</span><br><span class="line">                IP、IPv6、ICMP、ICMPv6、TCP、TCPv6、UDP 或 UDPv6。</span><br><span class="line">  -q            显示所有连接、侦听端口和绑定的</span><br><span class="line">                非侦听 TCP 端口。绑定的非侦听端口</span><br><span class="line">                 不一定与活动连接相关联。</span><br><span class="line">  -r            显示路由表。</span><br><span class="line">  -s            显示每个协议的统计信息。默认情况下，</span><br><span class="line">                显示 IP、IPv6、ICMP、ICMPv6、TCP、TCPv6、UDP 和 UDPv6 的统计信息;</span><br><span class="line">                -p 选项可用于指定默认的子网。</span><br><span class="line">  -t            显示当前连接卸载状态。</span><br><span class="line">  -x            显示 NetworkDirect 连接、侦听器和共享</span><br><span class="line">                终结点。</span><br><span class="line">  -y            显示所有连接的 TCP 连接模板。</span><br><span class="line">                无法与其他选项结合使用。</span><br><span class="line">  interval      重新显示选定的统计信息，各个显示间暂停的</span><br><span class="line">                间隔秒数。按 CTRL+C 停止重新显示</span><br><span class="line">                统计信息。如果省略，则 netstat 将打印当前的</span><br><span class="line">                配置信息一次。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Linux环境下(排版不是很友好,指令较多,说明简洁)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">usage: netstat [-vWeenNcCF] [&lt;Af&gt;] -r         netstat &#123;-V|--version|-h|--help&#125;</span><br><span class="line">       netstat [-vWnNcaeol] [&lt;Socket&gt; ...]</span><br><span class="line">       netstat &#123; [-vWeenNac] -I[&lt;Iface&gt;] | [-veenNac] -i | [-cnNe] -M | -s [-6tuw] &#125; [delay]</span><br><span class="line"></span><br><span class="line">        -r, --route              display routing table</span><br><span class="line">        -I, --interfaces=&lt;Iface&gt; display interface table for &lt;Iface&gt;</span><br><span class="line">        -i, --interfaces         display interface table</span><br><span class="line">        -g, --groups             display multicast group memberships</span><br><span class="line">        -s, --statistics         display networking statistics (like SNMP)</span><br><span class="line">        -M, --masquerade         display masqueraded connections</span><br><span class="line"></span><br><span class="line">        -v, --verbose            be verbose</span><br><span class="line">        -W, --wide               don&apos;t truncate IP addresses</span><br><span class="line">        -n, --numeric            don&apos;t resolve names</span><br><span class="line">        --numeric-hosts          don&apos;t resolve host names</span><br><span class="line">        --numeric-ports          don&apos;t resolve port names</span><br><span class="line">        --numeric-users          don&apos;t resolve user names</span><br><span class="line">        -N, --symbolic           resolve hardware names</span><br><span class="line">        -e, --extend             display other/more information</span><br><span class="line">        -p, --programs           display PID/Program name for sockets</span><br><span class="line">        -o, --timers             display timers</span><br><span class="line">        -c, --continuous         continuous listing</span><br><span class="line"></span><br><span class="line">        -l, --listening          display listening server sockets</span><br><span class="line">        -a, --all                display all sockets (default: connected)</span><br><span class="line">        -F, --fib                display Forwarding Information Base (default)</span><br><span class="line">        -C, --cache              display routing cache instead of FIB</span><br><span class="line">        -Z, --context            display SELinux security context for sockets</span><br><span class="line"></span><br><span class="line">  &lt;Socket&gt;=&#123;-t|--tcp&#125; &#123;-u|--udp&#125; &#123;-U|--udplite&#125; &#123;-S|--sctp&#125; &#123;-w|--raw&#125;</span><br><span class="line">           &#123;-x|--unix&#125; --ax25 --ipx --netrom</span><br><span class="line">  &lt;AF&gt;=Use &apos;-6|-4&apos; or &apos;-A &lt;af&gt;&apos; or &apos;--&lt;af&gt;&apos;; default: inet</span><br><span class="line">  List of possible address families (which support routing):</span><br><span class="line">    inet (DARPA Internet) inet6 (IPv6) ax25 (AMPR AX.25)</span><br><span class="line">    netrom (AMPR NET/ROM) ipx (Novell IPX) ddp (Appletalk DDP)</span><br><span class="line">    x25 (CCITT X.25)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="查看端口号是否被占用的由来"><a href="#查看端口号是否被占用的由来" class="headerlink" title="查看端口号是否被占用的由来"></a>查看端口号是否被占用的由来</h4><p>netstat -anp 即为 netstat -a -n -p的缩写</p>
+<ul>
+<li>-a用于列出所有连接</li>
+<li>-n用于取消信息的解析，即将信息数字化(numeric)，包括主机(host),端口(port)和用户(user)。例如，主机为localhost，数字化为127.0.0.1;端口为http，数字化为80；关于用户，找不到实例，日后补充</li>
+<li>-p用于显示进程标识号和进程名称<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PID/Program name</span><br><span class="line">28161/nginx: master</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>28161</code>为进程号，<code>nginx: master</code>为进程名称</p>
+<p>至于<code>| grep 端口号</code>，grep为一个使用正则表达式的文本搜索命令。<br>事实上，如果仅仅查看端口占用情况，只需要<code>netstat -an | grep 端口号</code>。且该正则表达式明显不足，如果端口号为80，进行查询之后会出现很多无关的信息，因此我们需要优化一下。端口号显示数据的一个普遍规律是：端口号前面为冒号，后面为空格，例如<strong>:80&nbsp;</strong><br>因此，更为精准的匹配为<strong>grep:80\&nbsp;</strong>，注意\后面有一个空格<br>But……….依然无法去除来源地址存在80端口号的网络连接信息<br>最终查询命令:<br><code>netstat -anp | grep :端口号\空格</code></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/27/hello-blog/" itemprop="url">
-              
-                <span itemprop="name">hello blog</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-27T17:13:00+08:00"
-              content="2018-04-27" >
-          04-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-5/21287685.jpg" alt="hlx 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-5-5/88152682.jpg" alt="hlx 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/端口/" rel="tag"><i class="fa fa-tag"></i> 端口</a>
+          
+            <a href="/tags/探讨/" rel="tag"><i class="fa fa-tag"></i> 探讨</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/23/入门Java-Clone-克隆/" rel="next" title="入门Java:Clone(克隆)">
+                <i class="fa fa-chevron-left"></i> 入门Java:Clone(克隆)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2018/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -485,6 +546,15 @@ var _hmt = _hmt || [];
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS" sid="Linux:解除端口占用 [探讨篇]"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -505,8 +575,17 @@ var _hmt = _hmt || [];
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -605,6 +684,22 @@ var _hmt = _hmt || [];
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看端口是否被占用-所属的网络协议"><span class="nav-number">1.</span> <span class="nav-text">查看端口是否被占用(所属的网络协议)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看端口号所属进程"><span class="nav-number">2.</span> <span class="nav-text">查看端口号所属进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#杀掉进程"><span class="nav-number">3.</span> <span class="nav-text">杀掉进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Netstat"><span class="nav-number">4.</span> <span class="nav-text">Netstat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用法"><span class="nav-number">4.2.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看端口号是否被占用的由来"><span class="nav-number">4.3.</span> <span class="nav-text">查看端口号是否被占用的由来</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -774,6 +869,10 @@ var _hmt = _hmt || [];
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
