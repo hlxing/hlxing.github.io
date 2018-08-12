@@ -91,18 +91,18 @@ var _hmt = _hmt || [];
 
 
 
-<meta name="description" content="前言Spring Boot项目通过JAR打包部署的时候，一般我们所采取的措施是将其注册为服务，并通过service命令管理项目。但注册服务的过程相对繁琐，不如写一个脚本来快速注册(入门Shell)。 注册服务脚本123456789#!/bin/shecho &amp;quot;Please input the path of jar:&amp;quot;read jar_pathecho &amp;quot;Please">
+<meta name="description" content="前言Spring Boot项目通过JAR打包部署的时候，一般我们所采取的措施是将其注册为服务，并通过service命令管理项目。但注册服务的过程相对繁琐，不如写一个脚本来快速注册(入门Shell)。 注册服务脚本123456789#!/bin/shecho &amp;quot;Please input the path of jar:&amp;quot;read -e jar_pathecho &amp;quot;Ple">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一个Shell | Spring Boot 快速注册服务脚本">
 <meta property="og:url" content="http://inmyai.com/2018/08/09/第一个Shell-Spring-Boot-快速注册服务脚本/index.html">
 <meta property="og:site_name" content="hlx">
-<meta property="og:description" content="前言Spring Boot项目通过JAR打包部署的时候，一般我们所采取的措施是将其注册为服务，并通过service命令管理项目。但注册服务的过程相对繁琐，不如写一个脚本来快速注册(入门Shell)。 注册服务脚本123456789#!/bin/shecho &amp;quot;Please input the path of jar:&amp;quot;read jar_pathecho &amp;quot;Please">
+<meta property="og:description" content="前言Spring Boot项目通过JAR打包部署的时候，一般我们所采取的措施是将其注册为服务，并通过service命令管理项目。但注册服务的过程相对繁琐，不如写一个脚本来快速注册(入门Shell)。 注册服务脚本123456789#!/bin/shecho &amp;quot;Please input the path of jar:&amp;quot;read -e jar_pathecho &amp;quot;Ple">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-8-9/88921587.jpg">
-<meta property="og:updated_time" content="2018-08-09T10:45:40.452Z">
+<meta property="og:updated_time" content="2018-08-12T09:01:51.948Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一个Shell | Spring Boot 快速注册服务脚本">
-<meta name="twitter:description" content="前言Spring Boot项目通过JAR打包部署的时候，一般我们所采取的措施是将其注册为服务，并通过service命令管理项目。但注册服务的过程相对繁琐，不如写一个脚本来快速注册(入门Shell)。 注册服务脚本123456789#!/bin/shecho &amp;quot;Please input the path of jar:&amp;quot;read jar_pathecho &amp;quot;Please">
+<meta name="twitter:description" content="前言Spring Boot项目通过JAR打包部署的时候，一般我们所采取的措施是将其注册为服务，并通过service命令管理项目。但注册服务的过程相对繁琐，不如写一个脚本来快速注册(入门Shell)。 注册服务脚本123456789#!/bin/shecho &amp;quot;Please input the path of jar:&amp;quot;read -e jar_pathecho &amp;quot;Ple">
 <meta name="twitter:image" content="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-8-9/88921587.jpg">
 
 
@@ -407,11 +407,11 @@ var _hmt = _hmt || [];
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Spring Boot项目通过JAR打包部署的时候，一般我们所采取的措施是将其注册为服务，并通过<strong>service</strong>命令管理项目。但注册服务的过程相对繁琐，不如写一个脚本来快速注册(入门Shell)。</p>
-<h3 id="注册服务脚本"><a href="#注册服务脚本" class="headerlink" title="注册服务脚本"></a>注册服务脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">echo &quot;Please input the path of jar:&quot;</span><br><span class="line">read jar_path</span><br><span class="line">echo &quot;Please input the name of service:&quot;</span><br><span class="line">read service_name</span><br><span class="line">service_path=&quot;/etc/init.d/&quot;$service_name</span><br><span class="line">ln -s $jar_path $service_path</span><br><span class="line">chmod +x $service_path</span><br><span class="line">echo &quot;Register success!&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="注册服务脚本"><a href="#注册服务脚本" class="headerlink" title="注册服务脚本"></a>注册服务脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">echo &quot;Please input the path of jar:&quot;</span><br><span class="line">read -e jar_path</span><br><span class="line">echo &quot;Please input the name of service:&quot;</span><br><span class="line">read -e service_name</span><br><span class="line">service_path=&quot;/etc/init.d/&quot;$service_name</span><br><span class="line">ln -s $jar_path $service_path</span><br><span class="line">chmod +x $service_path</span><br><span class="line">echo &quot;Register success!&quot;</span><br></pre></td></tr></table></figure>
 <h3 id="脚本说明"><a href="#脚本说明" class="headerlink" title="脚本说明"></a>脚本说明</h3><ul>
 <li>‘#’开头所在行即为注释，’#!’为约定的标记，代表这个脚本需要使用的解释器</li>
 <li>echo用于字符的显示，提高用户体验</li>
-<li>read用于读取输入流，并将其存入指定的变量</li>
+<li>read用于读取输入流，并将其存入指定的变量；-e使得输入的字符暂时存储在缓存区中，解决read退格异常问题</li>
 <li>字符串拼接：只需将变量紧挨在一起即可</li>
 <li>ln -s : 创建指向目标jar的软连接(类似于快捷方式)，存放在’/etc/init.d/‘中</li>
 <li>chmod +x :增加可执行权限</li>
