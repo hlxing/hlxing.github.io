@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>LC:Longest Substring Without Repeating Characters</title>
+      <link href="/2018/09/08/LC-Longest-Substring-Without-Repeating-Characters/"/>
+      <url>/2018/09/08/LC-Longest-Substring-Without-Repeating-Characters/</url>
+      <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>Given a string, find the length of the longest substring without repeating characters.</p><h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;abcabcbb&quot;</span><br><span class="line">Output: 3 </span><br><span class="line">Explanation: The answer is &quot;abc&quot;, which the length is 3.</span><br></pre></td></tr></table></figure><h4 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;bbbbb&quot;</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: The answer is &quot;b&quot;, with the length of 1.</span><br></pre></td></tr></table></figure><h4 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3:"></a>Example 3:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;pwwkew&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The answer is &quot;wke&quot;, with the length of 3. </span><br><span class="line">             Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.</span><br></pre></td></tr></table></figure><h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>根据题意，最长的子字符串需要满足不含有重复字符，也就是该字符串没有2个相同的字符。因此，寻找子字符串的过程中，如果遇到重复字符，则需要重新计算最大长度。<br>问题的关键在于:  </p><ul><li>计算最大长度  </li><li>判断重复字符</li></ul><p>计算最大长度：引入两个”指针”，第一个指针指向子字符串”起点”(子字符串前面的一个字符)，初始为-1，第二个指针指向子字符串的终点，指针值即为字符串的下标，初始为-1。循环遍历字符串，第二个指针不断自增，为当前循环的字符的下标。每次循环计算终点指针和起点指针的差值即为子字符串的长度。  </p><p>判断重复字符：初始化一个字符映射，键为字符的ASCII值，值为字符的下标。字符下标代表着该字符上次所出现的位置,初始值为-1，即没有出现过。如果字符下标大于起点，则代表该字符已经出现过一次了，需要将第一个指针重新指向该重复字符，即为新子字符串的”起点”</p><h5 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h5><p>输入: <code>ABCB</code></p><p>起点指针指向-1下标，<code>A</code>上次的下标为-1 &lt;= 起点(<code>A</code>上次的位置在起点之前)，<code>A</code>没有重复，起点指针不变，终点指针指向<code>A</code>，当前长度 = 终点 - 起点 = 0 - (-1) = 1;依次类推到<code>C</code>，此时状态图:  </p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-9-8/39755096.jpg" alt="初始"></p><p>起点为-1，加入B之后，<code>B</code>上次的下标为1 &gt; 起点(<code>B</code>上次的位置在起点之后)，<code>B</code>有重复，起点指针指向<code>B</code>前面的一个字符，终点指针指向<code>B</code>，当前长度 = 终点 - 起点 = 3 - 1 = 2，代表的子字符串为<code>CB</code>(起点不包括)。</p><p><img src="http://hlx-blog.oss-cn-beijing.aliyuncs.com/18-9-8/67350660.jpg" alt="结果"></p><h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int lengthOfLongestSubstring(string s) &#123;</span><br><span class="line">        vector&lt;int&gt; dict(256, -1);</span><br><span class="line">        int maxLen = 0, start = -1;</span><br><span class="line">        for (int i = 0; i != s.length(); i++) &#123;</span><br><span class="line">            if (dict[s[i]] &gt; start)</span><br><span class="line">                start = dict[s[i]];</span><br><span class="line">            dict[s[i]] = i;</span><br><span class="line">            maxLen = max(maxLen, i - start);</span><br><span class="line">        &#125;</span><br><span class="line">        return maxLen;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h5><ul><li>ASCII一共有128个字符</li><li>扩展ASCII一共有256个字符，非国际标准</li></ul>]]></content>
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>第一个Shell | Spring Boot 快速注册服务脚本</title>
       <link href="/2018/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAShell-Spring-Boot-%E5%BF%AB%E9%80%9F%E6%B3%A8%E5%86%8C%E6%9C%8D%E5%8A%A1%E8%84%9A%E6%9C%AC/"/>
       <url>/2018/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAShell-Spring-Boot-%E5%BF%AB%E9%80%9F%E6%B3%A8%E5%86%8C%E6%9C%8D%E5%8A%A1%E8%84%9A%E6%9C%AC/</url>
