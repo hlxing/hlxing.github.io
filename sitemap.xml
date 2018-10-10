@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://inmyai.com/about/index.html</loc>
+    
+    <lastmod>2018-10-10T11:52:23.675Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://inmyai.com/2018/10/10/LC-%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
     
     <lastmod>2018-10-10T11:48:23.297Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://inmyai.com/2018/04/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2018-07-21T13:41:30.948Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://inmyai.com/about/index.html</loc>
-    
-    <lastmod>2018-07-16T07:58:37.049Z</lastmod>
     
   </url>
   
