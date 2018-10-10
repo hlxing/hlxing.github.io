@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title>JVM:对象还活着吗</title>
+      <link href="/2018/10/10/JVM-%E5%AF%B9%E8%B1%A1%E8%BF%98%E6%B4%BB%E7%9D%80%E5%90%97/"/>
+      <url>/2018/10/10/JVM-%E5%AF%B9%E8%B1%A1%E8%BF%98%E6%B4%BB%E7%9D%80%E5%90%97/</url>
+      <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>堆存放着很多实例，那么垃圾收集器是如何判断实例是否可以进行回收的呢？</p><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h3 id="引用计数算法-Reference-Counting"><a href="#引用计数算法-Reference-Counting" class="headerlink" title="引用计数算法(Reference Counting)"></a>引用计数算法(Reference Counting)</h3><p>这个算法实现起来比较简单，给每个对象加一个引用计数器，当有其他地方引用该对象时，引用计数器就加一，取消引用时则减一。目前, Python 就是采用这种算法来判断对象是否已经死亡。  </p><p>往往简单的东西就存在一些弊端，对于这么一种情况，A 对象中的成员引用 B 对象，B 对象中的成员引用 A 对象，然后让 A 和 B 对象指向 null。但是由于 A 还有被 B 引用， B 还有被 A 引用，由此形成一个闭环，这两个对象都无法被垃圾收集器回收。</p><h3 id="可达性分析算法-Reachability-Analysis"><a href="#可达性分析算法-Reachability-Analysis" class="headerlink" title="可达性分析算法(Reachability Analysis)"></a>可达性分析算法(Reachability Analysis)</h3><p>通过所谓的 GC Roots 作为对象的起始点，不断向下搜索，从搜索到的对象到 GC Roots 之间的所走的路径称之为 引用链(Reference Chain)。如果从 GC Roots 找不到这么一条链路到达该对象，则该对象不可达，符合可回收的对象。</p><p>所谓的 GC Roots：</p><ul><li>1.虚拟机栈引用的对象</li><li>2.方法区中静态变量引用的对象</li><li>3.方法区中常量引用的对象</li><li>4.JNI引用的对象</li></ul>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title>LC:所有可能的满二叉树</title>
       <link href="/2018/10/10/LC-%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
       <url>/2018/10/10/LC-%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
@@ -44,6 +53,27 @@
           
       </categories>
       
+      
+    </entry>
+    
+    <entry>
+      <title>Shell:单引号|双引号|不加引号</title>
+      <link href="/2018/09/22/Shell-%E5%8D%95%E5%BC%95%E5%8F%B7-%E5%8F%8C%E5%BC%95%E5%8F%B7-%E4%B8%8D%E5%8A%A0%E5%BC%95%E5%8F%B7/"/>
+      <url>/2018/09/22/Shell-%E5%8D%95%E5%BC%95%E5%8F%B7-%E5%8F%8C%E5%BC%95%E5%8F%B7-%E4%B8%8D%E5%8A%A0%E5%BC%95%E5%8F%B7/</url>
+      <content type="html"><![CDATA[<h3 id="单引号"><a href="#单引号" class="headerlink" title="单引号"></a>单引号</h3><p><strong>所见即所得</strong>，任何由单引号包含的内容都会被原样输出，即便里面包含一个变量的名字，变量名也会直接被输出，而非把该变量取值后再进行输出，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">data=&quot;s&quot;</span><br><span class="line">echo &apos;$data&apos;</span><br></pre></td></tr></table></figure></p><h3 id="双引号"><a href="#双引号" class="headerlink" title="双引号"></a>双引号</h3><p>相比于单引号，如果内容包括指令或者变量名，则会先把执行的执行结果替代指令，或是把变量值解析后替代变量名。注意，变量名的前面应该加上<code>$</code>，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">data=&quot;s&quot;</span><br><span class="line">echo &quot;$data&quot;</span><br></pre></td></tr></table></figure></p><h3 id="不加引号"><a href="#不加引号" class="headerlink" title="不加引号"></a>不加引号</h3><p>不加引号与加双引号基本功能类似，都具有转义的功能。唯一的一个区别是，如果不加引号，则含有空格的字符串将不会作为一个整体，而且，一些转义字符也无法输出。例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">a=b c</span><br><span class="line">echo &quot;$a&quot;</span><br><span class="line">a=&quot;b c&quot;</span><br><span class="line">echo &quot;$a&quot;</span><br><span class="line">a=b \n c</span><br><span class="line">echo &quot;$a&quot;</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      <categories>
+          
+          <category> Shell </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 归纳 </tag>
+            
+        </tags>
       
     </entry>
     

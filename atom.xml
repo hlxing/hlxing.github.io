@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://inmyai.com/"/>
-  <updated>2018-10-10T11:48:23.297Z</updated>
+  <updated>2018-10-10T13:56:04.247Z</updated>
   <id>http://inmyai.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM:对象还活着吗</title>
+    <link href="http://inmyai.com/2018/10/10/JVM-%E5%AF%B9%E8%B1%A1%E8%BF%98%E6%B4%BB%E7%9D%80%E5%90%97/"/>
+    <id>http://inmyai.com/2018/10/10/JVM-对象还活着吗/</id>
+    <published>2018-10-10T12:06:47.000Z</published>
+    <updated>2018-10-10T13:56:04.247Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>堆存放着很多实例，那么垃圾收集器是如何判断实例是否可以进行回收的呢？</p><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h3 id="引用计数算法-Reference-Counting"><a href="#引用计数算法-Reference-Counting" class="headerlink" title="引用计数算法(Reference Counting)"></a>引用计数算法(Reference Counting)</h3><p>这个算法实现起来比较简单，给每个对象加一个引用计数器，当有其他地方引用该对象时，引用计数器就加一，取消引用时则减一。目前, Python 就是采用这种算法来判断对象是否已经死亡。  </p><p>往往简单的东西就存在一些弊端，对于这么一种情况，A 对象中的成员引用 B 对象，B 对象中的成员引用 A 对象，然后让 A 和 B 对象指向 null。但是由于 A 还有被 B 引用， B 还有被 A 引用，由此形成一个闭环，这两个对象都无法被垃圾收集器回收。</p><h3 id="可达性分析算法-Reachability-Analysis"><a href="#可达性分析算法-Reachability-Analysis" class="headerlink" title="可达性分析算法(Reachability Analysis)"></a>可达性分析算法(Reachability Analysis)</h3><p>通过所谓的 GC Roots 作为对象的起始点，不断向下搜索，从搜索到的对象到 GC Roots 之间的所走的路径称之为 引用链(Reference Chain)。如果从 GC Roots 找不到这么一条链路到达该对象，则该对象不可达，符合可回收的对象。</p><p>所谓的 GC Roots：</p><ul><li>1.虚拟机栈引用的对象</li><li>2.方法区中静态变量引用的对象</li><li>3.方法区中常量引用的对象</li><li>4.JNI引用的对象</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;堆存放着很多实例，那么垃圾收集器是如何判断实例是否可以进行回收的呢？&lt;/p&gt;
+&lt;h3 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>LC:所有可能的满二叉树</title>
@@ -85,6 +107,31 @@
     
       <category term="Leetcode" scheme="http://inmyai.com/categories/Leetcode/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Shell:单引号|双引号|不加引号</title>
+    <link href="http://inmyai.com/2018/09/22/Shell-%E5%8D%95%E5%BC%95%E5%8F%B7-%E5%8F%8C%E5%BC%95%E5%8F%B7-%E4%B8%8D%E5%8A%A0%E5%BC%95%E5%8F%B7/"/>
+    <id>http://inmyai.com/2018/09/22/Shell-单引号-双引号-不加引号/</id>
+    <published>2018-09-22T06:07:00.000Z</published>
+    <updated>2018-10-10T12:04:02.623Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="单引号"><a href="#单引号" class="headerlink" title="单引号"></a>单引号</h3><p><strong>所见即所得</strong>，任何由单引号包含的内容都会被原样输出，即便里面包含一个变量的名字，变量名也会直接被输出，而非把该变量取值后再进行输出，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">data=&quot;s&quot;</span><br><span class="line">echo &apos;$data&apos;</span><br></pre></td></tr></table></figure></p><h3 id="双引号"><a href="#双引号" class="headerlink" title="双引号"></a>双引号</h3><p>相比于单引号，如果内容包括指令或者变量名，则会先把执行的执行结果替代指令，或是把变量值解析后替代变量名。注意，变量名的前面应该加上<code>$</code>，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">data=&quot;s&quot;</span><br><span class="line">echo &quot;$data&quot;</span><br></pre></td></tr></table></figure></p><h3 id="不加引号"><a href="#不加引号" class="headerlink" title="不加引号"></a>不加引号</h3><p>不加引号与加双引号基本功能类似，都具有转义的功能。唯一的一个区别是，如果不加引号，则含有空格的字符串将不会作为一个整体，而且，一些转义字符也无法输出。例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">a=b c</span><br><span class="line">echo &quot;$a&quot;</span><br><span class="line">a=&quot;b c&quot;</span><br><span class="line">echo &quot;$a&quot;</span><br><span class="line">a=b \n c</span><br><span class="line">echo &quot;$a&quot;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;单引号&quot;&gt;&lt;a href=&quot;#单引号&quot; class=&quot;headerlink&quot; title=&quot;单引号&quot;&gt;&lt;/a&gt;单引号&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;所见即所得&lt;/strong&gt;，任何由单引号包含的内容都会被原样输出，即便里面包含一个变量的名字，变量名也会直接被输出
+      
+    
+    </summary>
+    
+      <category term="Shell" scheme="http://inmyai.com/categories/Shell/"/>
+    
+    
+      <category term="归纳" scheme="http://inmyai.com/tags/%E5%BD%92%E7%BA%B3/"/>
     
   </entry>
   
@@ -505,31 +552,6 @@
     
     
       <category term="教程" scheme="http://inmyai.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello blog</title>
-    <link href="http://inmyai.com/2018/04/27/hello-blog/"/>
-    <id>http://inmyai.com/2018/04/27/hello-blog/</id>
-    <published>2018-04-27T09:13:00.000Z</published>
-    <updated>2018-05-02T14:53:30.388Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to my blog<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">quu..__</span><br><span class="line"> $$$b  `---.__</span><br><span class="line">  &quot;$$b        `--.                          ___.---uuudP</span><br><span class="line">   `$$b           `.__.------.__     __.---&apos;      $$$$&quot;              .</span><br><span class="line">     &quot;$b          -&apos;            `-.-&apos;            $$$&quot;              .&apos;|</span><br><span class="line">       &quot;.                                       d$&quot;             _.&apos;  |</span><br><span class="line">         `.   /                              ...&quot;             .&apos;     |</span><br><span class="line">           `./                           ..::-&apos;            _.&apos;       |</span><br><span class="line">            /                         .:::-&apos;            .-&apos;         .&apos;</span><br><span class="line">           :                          ::&apos;&apos;\          _.&apos;            |</span><br><span class="line">          .&apos; .-.             .-.           `.      .&apos;               |</span><br><span class="line">          : /&apos;$$|           .@&quot;$\           `.   .&apos;              _.-&apos;</span><br><span class="line">         .&apos;|$u$$|          |$$,$$|           |  &lt;            _.-&apos;</span><br><span class="line">         | `:$$:&apos;          :$$$$$:           `.  `.       .-&apos;</span><br><span class="line">         :                  `&quot;--&apos;             |    `-.     \</span><br><span class="line">        :##.       ==             .###.       `.      `.    `\</span><br><span class="line">        |##:                      :###:        |        &gt;     &gt;</span><br><span class="line">        |#&apos;     `..&apos;`..&apos;          `###&apos;        x:      /     /</span><br><span class="line">         \                                   xXX|     /    ./</span><br><span class="line">          \                                xXXX&apos;|    /   ./</span><br><span class="line">          /`-.                                  `.  /   /</span><br><span class="line">         :    `-  ...........,                   | /  .&apos;</span><br><span class="line">         |         ``:::::::&apos;       .            |&lt;    `.</span><br><span class="line">         |             ```          |           x| \ `.:``.</span><br><span class="line">         |                         .&apos;    /&apos;   xXX|  `:`M`M&apos;:.</span><br><span class="line">         |    |                    ;    /:&apos; xXXX&apos;|  -&apos;MMMMM:&apos;</span><br><span class="line">         `.  .&apos;                   :    /:&apos;       |-&apos;MMMM.-&apos;</span><br><span class="line">          |  |                   .&apos;   /&apos;        .&apos;MMM.-&apos;</span><br><span class="line">          `&apos;`&apos;                   :  ,&apos;          |MMM&lt;</span><br><span class="line">            |                     `&apos;            |tbap\</span><br><span class="line">             \                                  :MM.-&apos;</span><br><span class="line">              \                 |              .&apos;&apos;</span><br><span class="line">               \.               `.            /</span><br><span class="line">                /     .:::::::.. :           /</span><br><span class="line">               |     .:::::::::::`.         /</span><br><span class="line">               |   .:::------------\       /</span><br><span class="line">              /   .&apos;&apos;               &gt;::&apos;  /</span><br><span class="line">              `&apos;,:                 :    .&apos;</span><br><span class="line">                                   `:.:&apos;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to my blog&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line
-      
-    
-    </summary>
-    
-      <category term="日志" scheme="http://inmyai.com/categories/%E6%97%A5%E5%BF%97/"/>
-    
-    
-      <category term="第一篇" scheme="http://inmyai.com/tags/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     
   </entry>
   
